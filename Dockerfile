@@ -8,7 +8,7 @@ RUN sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/haproxy
 COPY "./init.sh" "/root/init.sh"
 RUN chmod +x /root/init.sh
 
-VOLUME ["/haproxy-cfg/haproxy-ctmpl"]
+VOLUME ["/haproxy-cfg/haproxy.ctmpl"]
 
 EXPOSE 80/tcp 443/tcp
 
