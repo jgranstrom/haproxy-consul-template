@@ -1,6 +1,8 @@
 FROM ubuntu:14.04
 MAINTAINER John Granström <granstrom.john@gmail.com>
 
+RUN apt-get update
+RUN apt-get install -y software-properties-common python-software-properties
 RUN add-apt-repository ppa:vbernat/haproxy-1.6
 RUN apt-get update && apt-get install -y haproxy && apt-get install -y unzip
 ADD https://releases.hashicorp.com/consul-template/0.13.0/consul-template_0.13.0_linux_amd64.zip /
