@@ -16,4 +16,4 @@ VOLUME ["/haproxy-cfg/haproxy.ctmpl"]
 EXPOSE 80/tcp 443/tcp
 
 ENTRYPOINT ["/root/init.sh"]
-CMD ["-consul", "consul.service.consul:8500", "-template", "/haproxy-cfg/haproxy.ctmpl:/etc/haproxy/haproxy.cfg:service haproxy restart"]
+CMD ["-consul", "consul.service.consul:8500", "-template", "/haproxy-cfg/haproxy.ctmpl:/etc/haproxy/haproxy.cfg:service haproxy reload"]
